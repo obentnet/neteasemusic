@@ -1,9 +1,19 @@
 <?php
+    /**
+     * Netease
+     * By 狱杰
+     * Link: https://github.com/obentnet/neteasemusic
+     */
     $id = $_GET['id'];
     $api = 'https://api.paugram.com/netease/?id=';
     $song_json = file_get_contents($api.$id);
     $song_data = json_decode($song_json,true);
 ?>
+<!--
+    网易云解析
+    By 狱杰
+    Link: https://github.com/obentnet/neteasemusic
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -19,6 +29,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css">
+    <!-- Aplayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
 </head>
 <body>
     <div class="main">
@@ -38,6 +51,13 @@
 
     <div class="core-main mdui-row">
         <div class="mdui-card mdui-typo">
+            <div id="aplayer">
+                <pre class="aplayer-lrc-content">
+                    <?php echo $song_data['lyric']?>
+                </pre>
+            </div>
+            <br>
+            <br>
             <div class="song-cover mdui-col-xs-6">
                 <img src="<?php echo $song_data['cover']?>" alt="">
             </div>
@@ -61,6 +81,18 @@
     </div>
 
     <footer>
+        <script>
+            const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                audio: [{
+                    name: '<?php echo $song_data['title']?>',
+                    artist: '<?php echo $song_data['artist']?>',
+                    url: '<?php echo $song_data['link']?>',
+                    cover: '<?php echo $song_data['cover']?>',
+                    autoplay:true,
+                }]
+            });
+        </script>
         <script
           src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
           integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
