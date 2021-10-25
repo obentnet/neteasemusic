@@ -1,0 +1,21 @@
+body{}
+.title-des{
+    padding: 10% 25% 0 25%;
+    text-align: center;
+}
+.title{
+    font-size: 3em;
+}
+.core-main{
+    padding: 5% 25% 0 25%;
+}
+.mdui-card{
+    padding: 5em;
+}
+.song-cover>img{
+    height: 15em;
+    border-radius: 50%;
+}
+.song-title{
+    font-size: 1.5em;
+}
