@@ -1,7 +1,15 @@
+/**
+* Netease
+* By 狱杰
+* Link: https://github.com/obentnet/neteasemusic
+*/
 body{}
 .title-des{
     padding: 10% 25% 0 25%;
     text-align: center;
+}
+.help{
+    padding: 2% 25% 0 25%;
 }
 .title{
     font-size: 3em;
@@ -18,4 +26,16 @@ body{}
 }
 .song-title{
     font-size: 1.5em;
+}
+@media screen and (max-width: 768px){
+    .title-des{
+        padding: 20% 0% 0 0%;
+        text-align: center;
+    }
+    .core-main{
+        padding: 20% 0% 0 0%;
+    }
+    .help{
+        padding: 2% 0% 0 0%;
+    }
 }
