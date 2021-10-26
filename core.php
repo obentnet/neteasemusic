@@ -28,7 +28,7 @@
       integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.2">
     <!-- Aplayer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
@@ -92,6 +92,9 @@
                     autoplay:true,
                 }]
             });
+        </script>
+        <script>
+            console.log('\u8be5\u7a0b\u5e8f\u4f7f\u7528\u4e86\u5947\u8da3\u4fdd\u7f57\u7684\u0041\u0050\u0049\u63a5\u53e3\u5f00\u53d1\uff0c\u8bf7\u5c0a\u91cd\u539f\u4f5c\u8005\u3002\u672c\u7a0b\u5e8f\u7531\u0020\u72f1\u6770\u0020\u5f00\u53d1\uff0c\u9e23\u8c22\u004d\u0044\u0055\u0049')
         </script>
         <script
           src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
